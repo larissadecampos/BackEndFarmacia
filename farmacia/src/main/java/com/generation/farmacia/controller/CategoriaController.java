@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.generation.farmacia.Model.CategoriaModel;
 import com.generation.farmacia.repository.CategoriaRepository;
 
-@RestController
-@RequestMapping("/categoria")
-@CrossOrigin(origins = "*", allowedHeaders ="*") // toda requisição tem um cabeçalho, * diz que vai aceitar tudo.
+@RestController                 //API faz a comunicação do site com o banco de dados. 
+@RequestMapping("/categoria")  //Ele vai mapear o que está na model, está mais ligado a URL.
+@CrossOrigin(origins = "*", allowedHeaders ="*") //Lembrete: toda requisição tem um cabeçalho, * diz que vai aceitar qualquer caracter..
 
 public class CategoriaController {
 
-	@Autowired
-	private CategoriaRepository repository;
+	@Autowired                              ///Essa anotação instancia a classe automáticamente, não importa o que está lá, traz tudo.
+	private CategoriaRepository repository; //Aqui estamos instanciando a classe, precisamos fazer isso pra acessá-la.
 
-	@GetMapping
+	@GetMapping  
 	public ResponseEntity<List<CategoriaModel>>getAll(){
 	return ResponseEntity.ok(repository.findAll());
 	}
@@ -42,7 +42,7 @@ public class CategoriaController {
 	public ResponseEntity<List<CategoriaModel>> GetByTitulo(@PathVariable String titulo){ // PathVariable = Caminho da variável
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}
-	@PostMapping  
+	@PostMapping   
 	public ResponseEntity <CategoriaModel>post(@RequestBody CategoriaModel titulo){ //produto pkeno é o objeto da classe, tudo que tem na model
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(titulo)); 
 	}

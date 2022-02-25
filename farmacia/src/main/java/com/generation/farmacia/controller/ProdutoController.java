@@ -23,9 +23,9 @@ import com.generation.farmacia.repository.ProdutoRepository;
 
 public class ProdutoController {
 	
-	private ProdutoRepository repository; // instanciando a classe, precisamos fazer isso pra acessar a classe
+	private ProdutoRepository repository;
 	
-	@Autowired // instancia a classe automáticamente (substitui o construtor "new"), linhas 29 e 30 fazem o mesmo que o @auto
+	@Autowired //substitui o construtor "new", linhas 29 e 30 fazem o mesmo que o @auto
 	public void setRepository(ProdutoRepository repository) {
 		this.repository=repository;
 	}

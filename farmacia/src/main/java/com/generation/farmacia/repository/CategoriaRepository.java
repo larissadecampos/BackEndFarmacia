@@ -12,3 +12,5 @@ import com.generation.farmacia.Model.CategoriaModel;
 	}
 
 
+//No JpaRepository vamos chamar tabela(CategoriaModel) e o tipo de dado(long) da chave primária da tabela.
+//List vai pegar a tabela CategoriaModel, trazer uma lista da <tabela> e vai encontrar tudo que contem o que foi buscado.
