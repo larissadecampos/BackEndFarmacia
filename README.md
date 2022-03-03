@@ -3,9 +3,9 @@
 A proposta desse modelo e-commerce é construir um back-end para uma Farmácia, nele será possível manipular os dados dos Produtos.
 
 # Etapas de desenvolvimento
--  Modelagem do Banco de Dados
--  Criação do projeto Maven usando o Spring Boot-
--  Desenvolvimento das camadas de entidade,repository,controller,service,security e test do projeto
+-  Modelagem do Banco de Dados.
+-  Criação do projeto Maven usando o Spring Boot.
+-  Desenvolvimento das camadas de entidade,repository,controller,service,security e test do projeto.
 
 # Softwares & Ferramentas utilizadas nesse projeto
 - [x] JAVA
